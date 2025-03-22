@@ -19,7 +19,7 @@ function Dashboard() {
                             <li className="nav-item">
                                 <a className="nav-link" href="./" >
                                     <span className="nav-link-icon d-md-none d-lg-inline-block">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-1">
                                             <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
                                             <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
                                             <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
@@ -33,7 +33,7 @@ function Dashboard() {
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="layout-fluid-vertical.html#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false">
                                     <span className="nav-link-icon d-md-none d-lg-inline-block">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-1">
                                             <path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" />
                                             <path d="M12 12l8 -4.5" />
                                             <path d="M12 12l0 9" />
@@ -41,7 +41,7 @@ function Dashboard() {
                                             <path d="M16 5.25l-8 4.5" />
                                         </svg>
                                     </span>
-                                    <span className="nav-link-title"> Interface </span>
+                                    <span className="nav-link-title"> Interface </span> 
                                 </a>
                                 <div className="dropdown-menu">
                                     <div className="dropdown-menu-columns">
@@ -62,29 +62,29 @@ function Dashboard() {
             {/* Page Content */}
             <div className="page-wrapper">
                 {/* Page header */}
-                <div class="page-header d-print-none">
-                    <div class="container-xl">
-                        <div class="row g-2 align-items-center">
-                            <div class="col">
-                              <div class="page-pretitle">
+                <div className="page-header d-print-none">
+                    <div className="container-xl">
+                        <div className="row g-2 align-items-center">
+                            <div className="col">
+                              <div className="page-pretitle">
                               Overview
                               </div>
-                              <h2 class="page-title">Fluid vertical layout</h2>
+                              <h2 className="page-title">Fluid vertical layout</h2>
                             </div>
-                            <div class="col-auto ms-auto d-print-none">
-                              <div class="btn-list">
-                              <span class="d-none d-sm-inline">
-                              <a href="layout-fluid-vertical.html#" class="btn btn-1"> New view </a> 
+                            <div className="col-auto ms-auto d-print-none">
+                              <div className="btn-list">
+                              <span className="d-none d-sm-inline">
+                              <a href="layout-fluid-vertical.html#" className="btn btn-1"> New view </a> 
                               </span>
-                              <a href="layout-fluid-vertical.html#" class="btn btn-primary btn-5 d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-report"> 
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-2">
+                              <a href="layout-fluid-vertical.html#" className="btn btn-primary btn-5 d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-report"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-2">
                               <path d="M12 5l0 14" />
                               <path d="M5 12l14 0" />
                               </svg>
                                Create new report 
                               </a>
-                              <a href="layout-fluid-vertical.html#" class="btn btn-primary btn-6 d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-report" aria-label="Create new report"> 
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-2">
+                              <a href="layout-fluid-vertical.html#" className="btn btn-primary btn-6 d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-report" aria-label="Create new report"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-2">
                               <path d="M12 5l0 14" />
                               <path d="M5 12l14 0" />
                               </svg>
@@ -110,8 +110,8 @@ function Dashboard() {
                                             <div className="text-secondary">
                                                 Show
                                                 <div className="mx-2 d-inline-block">
-                                                    <input type="text" className="form-control form-control-sm" value="8" size="3" aria-label="Invoices count" />
-                                                </div>
+                                                <input type="text" className="form-control form-control-sm" value="8" size="3" aria-label="Invoices count" onChange={() => {}} />
+                                            </div>
                                                 entries
                                             </div>
                                             <div className="ms-auto text-secondary">
@@ -172,7 +172,7 @@ function Dashboard() {
                                         <ul className="pagination m-0 ms-auto">
                                             <li className="page-item disabled">
                                                 <a className="page-link" href="#" tabIndex="-1" aria-disabled="true">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-1">
                                                 <path d="M15 6l-6 6l6 6" />
                                                 </svg>
                                                     prev
@@ -186,7 +186,7 @@ function Dashboard() {
                                             <li className="page-item">
                                                 <a className="page-link" href="#">
                                                     next
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-1">
                                                     <path d="M9 6l6 6l-6 6" />
                                                     </svg>                                                    
                                                 </a>
