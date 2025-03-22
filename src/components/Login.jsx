@@ -1,24 +1,17 @@
-import React, { useState, Suspense, lazy } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import '@tabler/core/dist/css/tabler.min.css'; // 已移动到 src/main.jsx
-import TablerButton from './ui/TablerButton';
-// 动态导入图标 (使用 PascalCase 文件名)
-const IconBrandGithub = lazy(() => import('@tabler/icons-react/dist/esm/icons/IconBrandGithub.mjs'));
-const IconBrandX = lazy(() => import('@tabler/icons-react/dist/esm/icons/IconBrandX.mjs'));
 
 function Login() {
     const [loading, setLoading] = useState(false);
 
     const handleLogin = () => {
-        //setLoading(true);
-        //setLoading(false);
+        // setLoading(true);
+        // setLoading(false);
     };
+
     return (
         <div className="page page-center">
             <div className="container container-tight py-4">
-                <div className="text-center mb-4">
-                    <a href="." className="navbar-brand navbar-brand-autodark">Logo</a>
-                </div>
                 <div className="card card-md">
                     <div className="card-body">
                         <h2 className="h2 text-center mb-4">Login to your account</h2>
@@ -34,48 +27,23 @@ function Login() {
                                         <Link to="/forgot-password">I forgot password</Link>
                                     </span>
                                 </label>
-                                <input type="password" className="form-control" placeholder="Your password" autoComplete="off" />
-                            </div>
-                            <div className="mb-2">
-                                <label className="form-check">
-                                    <input type="checkbox" className="form-check-input" />
-                                    <span className="form-check-label">Remember me on this device</span>
-                                </label>
+                                <div className="input-group input-group-flat">
+                                    <input type="password" className="form-control" placeholder="Your password"  autoComplete="off"/>
+                                    <span className="input-group-text">
+                                        <a href="#" className="link-secondary" title="Show password" data-bs-toggle="tooltip">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icon-tabler-eye">
+                                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                            </svg>
+                                        </a>
+                                    </span>
+                                </div>
                             </div>
                             <div className="form-footer">
-                                {/* <button type="submit" className="btn btn-primary w-100">Sign in</button> */}
-                                <TablerButton color="primary" block onClick={handleLogin} loading={loading} text="Sign in" />
+                                <button type="submit" className="btn btn-primary w-100" onClick={handleLogin} disabled={loading}>Sign in</button>
                             </div>
                         </form>
-                        {/* 添加分隔线和第三方登录按钮 */}
-                        <div className="hr-text">or</div>
-                        <div className="row">
-                           <div className="col">
-                                <Suspense fallback={<span className="me-2">github</span>}>
-                                    <TablerButton
-                                        block
-                                        icon={IconBrandGithub}
-                                        iconColor="github"
-                                        text="Login with Github"
-                                    />
-                                </Suspense>
-                            </div>
-                            <div className="col">
-                                 <Suspense fallback={<span className="me-2">x</span>}>
-                                    <TablerButton
-                                        block
-                                        icon={IconBrandX}
-                                        iconColor="x"
-                                        text="Login with X"
-                                    />
-                                </Suspense>
-                            </div>
-                        </div>
                     </div>
-
-                </div>
-                <div className="text-center text-muted mt-3">
-                    Don't have an account yet? <Link to="/sign-up">Sign up</Link>
                 </div>
             </div>
         </div>
